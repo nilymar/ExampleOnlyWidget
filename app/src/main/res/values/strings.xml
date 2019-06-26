@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">"Example Weather Widget"</string>
-    <string name="api_key">a179c797da494f49971130703191205</string>
+    <string name="api_key">PUT YOUR OWN KEY HERE!!!!!</string>
     <string name="no_data_available">No Forecast found</string>
     <string name="no_internet_connection">No Internet connection</string>
     <!-- this is the content of the about screen inflated from the menu-->
