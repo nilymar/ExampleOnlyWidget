@@ -146,6 +146,7 @@ public class WeatherWidgetProvider extends AppWidgetProvider {
         else {
             city = weather.getCity();
             humidity = weather.getHumidity();
+            humidity += "%";
             // creating the feel like temp display
             feelLike = weather.getFeelsLikeC();
             Float feelL = Float.parseFloat(feelLike);
