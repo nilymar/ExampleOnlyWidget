@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="background_main">#fff999</color>
+    <color name="about_text">#424242</color>
+    <color name="text_color">#000000</color>
+    <color name="night_text">#ffffff</color>
+    <color name="light_blue">#bdf9f8</color>
+    <color name="night_blue">#618e8e</color>
+    <color name="night_dark">#0d2a5b</color>
+    <color name="night_title">#fff999</color>
+</resources>

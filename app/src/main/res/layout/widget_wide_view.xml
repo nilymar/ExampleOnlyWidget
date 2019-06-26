@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@color/background_main"
+    android:textDirection="ltr">
+
+    <ImageView
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/widget_description"
+        tools:src="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/current_city"
+        android:theme="@style/widgetBigTitle"
+        style="@style/widgetBigTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        tools:text="new york" />
+
+    <TextView
+        android:id="@+id/current_temp_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/current_city"
+        android:layout_alignParentLeft="true"
+        android:text="@string/current_temp"/>
+
+    <TextView
+        android:id="@+id/current_temp"
+        style="@style/widgetText"
+        android:layout_below="@id/current_city"
+        android:layout_toRightOf="@id/current_temp_title"
+        tools:text="10c" />
+
+    <TextView
+        android:id="@+id/feel_like_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/current_temp_title"
+        android:layout_alignParentLeft="true"
+        android:text="@string/feels_like" />
+
+    <TextView
+        android:id="@+id/feel_like"
+        style="@style/widgetText"
+        android:layout_below="@id/current_temp"
+        android:layout_toRightOf="@id/feel_like_title"
+        tools:text="10c" />
+
+    <TextView
+        android:id="@+id/humidity_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/feel_like_title"
+        android:layout_alignParentLeft="true"
+        android:text="@string/humidity" />
+
+    <TextView
+        android:id="@+id/humidity"
+        style="@style/widgetText"
+        android:layout_below="@id/feel_like"
+        android:layout_toRightOf="@id/humidity_title"
+        tools:text="0%" />
+
+    <TextView
+        android:id="@+id/current_time_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/current_city"
+        android:layout_margin="@dimen/very_small_margin"
+        android:layout_toLeftOf="@id/current_time"
+        android:text="@string/time_of_forecast"/>
+
+    <TextView
+        android:id="@+id/current_time"
+        style="@style/widgetText"
+        android:layout_below="@id/current_city"
+        android:layout_alignParentRight="true"
+        tools:text="00:00" />
+
+    <TextView
+        android:id="@+id/wind_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/current_time"
+        android:layout_margin="@dimen/very_small_margin"
+        android:layout_toLeftOf="@id/wind"
+        android:text="@string/wind" />
+
+    <TextView
+        android:id="@+id/wind"
+        style="@style/widgetText"
+        android:layout_below="@id/current_time"
+        android:layout_alignParentRight="true"
+        tools:text="0 kph" />
+
+    <TextView
+        android:id="@+id/wind_dir_title"
+        style="@style/widgetTextTitles"
+        android:layout_below="@id/wind"
+        android:layout_margin="@dimen/very_small_margin"
+        android:layout_toLeftOf="@id/wind_dir"
+        android:text="@string/wind_dir"/>
+
+    <TextView
+        android:id="@+id/wind_dir"
+        style="@style/widgetText"
+        android:layout_below="@id/wind"
+        android:layout_alignParentRight="true"
+        tools:text="N" />
+
+    <ImageView
+        android:id="@+id/widget_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/current_city"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/very_small_margin"
+        android:minWidth="@dimen/widget_icon"
+        android:minHeight="@dimen/widget_icon"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/a113" />
+
+</RelativeLayout>

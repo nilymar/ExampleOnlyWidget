@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        style="@style/card_view"
+        card_view:cardBackgroundColor="@color/background_main"
+        card_view:cardCornerRadius="@dimen/card_radius">
+
+        <RelativeLayout
+            android:id="@+id/current_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin">
+
+            <TextView
+                android:id="@+id/current_title"
+                style="@style/list_item_title"
+                android:layout_width="wrap_content"
+                android:gravity="left"
+                android:text="@string/current_weather"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/current_time"
+                style="@style/list_item_title"
+                android:layout_width="wrap_content"
+                android:paddingLeft="@dimen/small_margin"
+                android:gravity="left"
+                android:text="@string/temp_temp"
+                android:layout_toRightOf="@id/current_title"/>
+
+            <ImageView
+                android:id="@+id/current_icon"
+                style="@style/list_item_image"
+                android:scaleType="centerCrop"
+                android:layout_alignParentRight="true"
+                android:layout_alignRight="@id/current_title"
+                 />
+
+            <TextView
+                android:id="@+id/current_temp"
+                style="@style/list_item_field"
+                android:text="@string/current_temp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/current_title"/>
+
+            <TextView
+                android:id="@+id/current_temp_text"
+                style="@style/current_list_item_text"
+                android:layout_toRightOf="@id/current_temp"
+                android:layout_toLeftOf="@id/current_icon"
+                android:layout_below="@id/current_title"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/current_wind"
+                style="@style/list_item_field"
+                android:text="@string/current_wind_kph"
+                android:layout_below="@id/current_temp" />
+
+            <TextView
+                android:id="@+id/current_wind_text"
+                style="@style/current_list_item_text"
+                android:layout_below="@id/current_temp"
+                android:layout_toRightOf="@id/current_wind"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/current_wind_dir"
+                style="@style/list_item_field"
+                android:text="Current wind dir: "
+                android:layout_below="@id/current_wind" />
+
+            <TextView
+                android:id="@+id/current_wind_dir_text"
+                style="@style/current_list_item_text"
+                android:layout_below="@id/current_wind"
+                android:layout_toRightOf="@id/current_wind_dir"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/current_conditions"
+                style="@style/list_item_field"
+                android:text="@string/conditions"
+                android:layout_below="@id/current_wind_dir"
+                />
+
+            <TextView
+                android:id="@+id/current_conditions_text"
+                style="@style/current_list_item_text"
+                android:maxLines="3"
+                android:layout_below="@id/current_wind_dir"
+                android:layout_toRightOf="@id/current_conditions"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/current_humidity"
+                style="@style/list_item_field"
+                android:layout_below="@id/current_conditions_text"
+                android:text="@string/humidity_title"
+                />
+
+            <TextView
+                android:id="@+id/current_humidity_text"
+                style="@style/current_list_item_text"
+                android:paddingBottom="@dimen/small_margin"
+                android:layout_below="@id/current_conditions_text"
+                android:layout_toRightOf="@id/current_humidity"
+                tools:text="@string/temp_temp" />
+
+        </RelativeLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/forecast_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_margin">
+
+            <TextView
+                android:id="@+id/date_of_forecast"
+                style="@style/list_item_title"
+                android:layout_width="0dp"
+                android:gravity="left"
+                android:text="@string/date_of_forecast"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <ImageView
+                android:id="@+id/condition_icon"
+                style="@style/list_item_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/date_of_forecast"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/a113" />
+
+            <TextView
+                android:id="@+id/min_temp"
+                style="@style/list_item_field"
+                android:text="@string/min_temp_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_of_forecast" />
+
+            <TextView
+                android:id="@+id/min_temp_text"
+                style="@style/list_item_text"
+                app:layout_constraintLeft_toRightOf="@+id/min_temp"
+                app:layout_constraintTop_toBottomOf="@id/date_of_forecast"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/max_temp"
+                style="@style/list_item_field"
+                android:text="@string/max_temp_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/min_temp" />
+
+            <TextView
+                android:id="@+id/max_temp_text"
+                style="@style/list_item_text"
+                app:layout_constraintLeft_toRightOf="@id/max_temp"
+                app:layout_constraintTop_toBottomOf="@id/min_temp"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/conditions"
+                style="@style/list_item_field"
+                android:text="@string/conditions"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/max_temp" />
+
+            <TextView
+                android:id="@+id/conditions_text"
+                style="@style/list_item_text"
+                android:maxLines="3"
+                app:layout_constraintLeft_toRightOf="@id/conditions"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/max_temp"
+                tools:text="@string/temp_temp" />
+
+            <TextView
+                android:id="@+id/humidity"
+                style="@style/list_item_field"
+                android:text="@string/humidity_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/conditions_text" />
+
+            <TextView
+                android:id="@+id/humidity_text"
+                style="@style/list_item_text"
+                android:paddingBottom="@dimen/small_margin"
+                app:layout_constraintLeft_toRightOf="@id/humidity"
+                app:layout_constraintTop_toBottomOf="@id/conditions_text"
+                tools:text="@string/temp_temp" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

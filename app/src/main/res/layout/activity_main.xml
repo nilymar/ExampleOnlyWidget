@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:id="@+id/forecast_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/regular_margin"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:text="@string/settings_city_default" />
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/forecast_city">
+
+        <!-- Layout for a list of weather forecast -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            style="@style/recycler_view" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        style="@style/empty_main_portrait"
+        tools:text="@string/no_data_available" />
+    <!-- progress bar view is only visible when the list is being created -->
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="@style/progress_main_portrait" />
+</RelativeLayout>
+
+<!--
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:id="@+id/current_card_view"
+style="@style/card_view"
+android:layout_below="@id/forecast_city"
+card_view:cardBackgroundColor="@color/background_main"
+card_view:cardCornerRadius="@dimen/card_radius">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/current_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="4dp"
+        android:gravity="left"
+        android:text="Current weather"
+        android:layout_alignParentStart="true"/>
+
+    <ImageView
+        android:id="@+id/icon"
+        style="@style/list_item_image"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/current_title"
+        tools:src="@drawable/a113" />
+
+    <TextView
+        android:id="@+id/current_temp"
+        style="@style/list_item_field"
+        android:text="Current temp: "
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/current_title"/>
+
+    <TextView
+        android:id="@+id/current_temp_text"
+        style="@style/list_item_text"
+        android:layout_alignRight="@id/current_temp"
+        android:layout_alignLeft="@id/icon"
+        tools:text="@string/temp_temp" />
+
+    <TextView
+        android:id="@+id/current_wind"
+        style="@style/list_item_field"
+        android:text="Current wind kph: "
+        android:layout_below="@id/current_temp" />
+
+    <TextView
+        android:id="@+id/current_wind_text"
+        style="@style/list_item_text"
+        android:layout_below="@id/current_temp"
+        android:layout_alignRight="@id/current_wind"
+        tools:text="@string/temp_temp" />
+
+    <TextView
+        android:id="@+id/current_wind_dir"
+        style="@style/list_item_field"
+        android:text="Current wind dir: "
+        android:layout_below="@id/current_wind" />
+
+    <TextView
+        android:id="@+id/current_wind_dir_text"
+        style="@style/list_item_text"
+        android:layout_below="@id/current_wind"
+        android:layout_alignRight="@id/current_wind_dir"
+        tools:text="@string/temp_temp" />
+
+    <TextView
+        android:id="@+id/conditions"
+        style="@style/list_item_field"
+        android:text="@string/conditions"
+        android:layout_below="@id/current_wind_dir"
+        />
+
+    <TextView
+        android:id="@+id/conditions_text"
+        style="@style/list_item_text"
+        android:maxLines="3"
+        android:layout_below="@id/current_wind_dir"
+        android:layout_alignRight="@id/conditions"
+        tools:text="@string/temp_temp" />
+
+    <TextView
+        android:id="@+id/humidity"
+        style="@style/list_item_field"
+        android:layout_below="@id/conditions_text"
+        android:text="@string/humidity_title"
+        />
+
+    <TextView
+        android:id="@+id/humidity_text"
+        style="@style/list_item_text"
+        android:paddingBottom="@dimen/small_margin"
+        android:layout_below="@id/conditions_text"
+        android:layout_alignRight="@id/humidity"
+        tools:text="@string/temp_temp" />
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>-->

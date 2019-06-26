@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="day_conditions">
+        <item>Sunny</item>
+        <item>Partly cloudy</item>
+        <item>Cloudy</item>
+        <item>Overcast</item>
+        <item>Mist</item>
+        <item>Patchy rain possible</item>
+        <item>Patchy snow possible</item>
+        <item>Patchy sleet possible</item>
+        <item>Patchy freezing drizzle possible</item>
+        <item>Thundery outbreaks possible</item>
+        <item>Blowing snow</item>
+        <item>Blizzard</item>
+        <item>Fog</item>
+        <item>Freezing fog</item>
+        <item>Patchy light drizzle</item>
+        <item>Light drizzle</item>
+        <item>Freezing drizzle</item>
+        <item>Heavy freezing drizzle</item>
+        <item>Patchy light rain</item>
+        <item>Light rain</item>
+        <item>Moderate rain at times</item>
+        <item>Moderate rain</item>
+        <item>Heavy rain at times</item>
+        <item>Heavy rain</item>
+        <item>Light freezing rain</item>
+        <item>Moderate or heavy freezing rain</item>
+        <item>Light sleet</item>
+        <item>Moderate or heavy sleet</item>
+        <item>Patchy light snow</item>
+        <item>Light snow</item>
+        <item>Patchy moderate snow</item>
+        <item>Moderate snow</item>
+        <item>Patchy heavy snow</item>
+        <item>Heavy snow</item>
+        <item>Ice pellets</item>
+        <item>Light rain shower</item>
+        <item>Moderate or heavy rain shower</item>
+        <item>Torrential rain shower</item>
+        <item>Light sleet showers</item>
+        <item>Moderate or heavy sleet showers</item>
+        <item>Light snow showers</item>
+        <item>Moderate or heavy snow showers</item>
+        <item>Light showers of ice pellets</item>
+        <item>Moderate or heavy showers of ice pellets</item>
+        <item>Patchy light rain with thunder</item>
+        <item>Moderate or heavy rain with thunder</item>
+        <item>Patchy light snow with thunder</item>
+        <item>Moderate or heavy snow with thunder</item>
+    </string-array>
+    <string-array name="day_icons">
+        <item>drawable/a113</item>
+        <item>drawable/a116</item>
+        <item>drawable/a119</item>
+        <item>drawable/a122</item>
+        <item>drawable/a143</item>
+        <item>drawable/a176</item>
+        <item>drawable/a179</item>
+        <item>drawable/a182</item>
+        <item>drawable/a185</item>
+        <item>drawable/a200</item>
+        <item>drawable/a227</item>
+        <item>drawable/a230</item>
+        <item>drawable/a248</item>
+        <item>drawable/a260</item>
+        <item>drawable/a263</item>
+        <item>drawable/a266</item>
+        <item>drawable/a281</item>
+        <item>drawable/a284</item>
+        <item>drawable/a293</item>
+        <item>drawable/a296</item>
+        <item>drawable/a299</item>
+        <item>drawable/a302</item>
+        <item>drawable/a305</item>
+        <item>drawable/a308</item>
+        <item>drawable/a311</item>
+        <item>drawable/a314</item>
+        <item>drawable/a317</item>
+        <item>drawable/a320</item>
+        <item>drawable/a323</item>
+        <item>drawable/a326</item>
+        <item>drawable/a329</item>
+        <item>drawable/a332</item>
+        <item>drawable/a335</item>
+        <item>drawable/a338</item>
+        <item>drawable/a350</item>
+        <item>drawable/a353</item>
+        <item>drawable/a356</item>
+        <item>drawable/a359</item>
+        <item>drawable/a362</item>
+        <item>drawable/a365</item>
+        <item>drawable/a368</item>
+        <item>drawable/a371</item>
+        <item>drawable/a374</item>
+        <item>drawable/a377</item>
+        <item>drawable/a386</item>
+        <item>drawable/a389</item>
+        <item>drawable/a392</item>
+        <item>drawable/a395</item>
+    </string-array>
+    <string-array name="night_conditions">
+        <item>Clear</item>
+        <item>Partly cloudy</item>
+        <item>Cloudy</item>
+        <item>Overcast</item>
+        <item>Mist</item>
+        <item>Patchy rain possible</item>
+        <item>Patchy snow possible</item>
+        <item>Patchy sleet possible</item>
+        <item>Patchy freezing drizzle possible</item>
+        <item>Thundery outbreaks possible</item>
+        <item>Blowing snow</item>
+        <item>Blizzard</item>
+        <item>Fog</item>
+        <item>Freezing fog</item>
+        <item>Patchy light drizzle</item>
+        <item>Light drizzle</item>
+        <item>Freezing drizzle</item>
+        <item>Heavy freezing drizzle</item>
+        <item>Patchy light rain</item>
+        <item>Light rain</item>
+        <item>Moderate rain at times</item>
+        <item>Moderate rain</item>
+        <item>Heavy rain at times</item>
+        <item>Heavy rain</item>
+        <item>Light freezing rain</item>
+        <item>Moderate or heavy freezing rain</item>
+        <item>Light sleet</item>
+        <item>Moderate or heavy sleet</item>
+        <item>Patchy light snow</item>
+        <item>Light snow</item>
+        <item>Patchy moderate snow</item>
+        <item>Moderate snow</item>
+        <item>Patchy heavy snow</item>
+        <item>Heavy snow</item>
+        <item>Ice pellets</item>
+        <item>Light rain shower</item>
+        <item>Moderate or heavy rain shower</item>
+        <item>Torrential rain shower</item>
+        <item>Light sleet showers</item>
+        <item>Moderate or heavy sleet showers</item>
+        <item>Light snow showers</item>
+        <item>Moderate or heavy snow showers</item>
+        <item>Light showers of ice pellets</item>
+        <item>Moderate or heavy showers of ice pellets</item>
+        <item>Patchy light rain with thunder</item>
+        <item>Moderate or heavy rain with thunder</item>
+        <item>Patchy light snow with thunder</item>
+        <item>Moderate or heavy snow with thunder</item>
+    </string-array>
+    <string-array name="night_icons">
+    <item>drawable/b113</item>
+    <item>drawable/b116</item>
+    <item>drawable/b119</item>
+    <item>drawable/b122</item>
+    <item>drawable/b143</item>
+    <item>drawable/b176</item>
+    <item>drawable/b179</item>
+    <item>drawable/b182</item>
+    <item>drawable/b185</item>
+    <item>drawable/b200</item>
+    <item>drawable/b227</item>
+    <item>drawable/b230</item>
+    <item>drawable/b248</item>
+    <item>drawable/b260</item>
+    <item>drawable/b263</item>
+    <item>drawable/b266</item>
+    <item>drawable/b281</item>
+    <item>drawable/b284</item>
+    <item>drawable/b293</item>
+    <item>drawable/b296</item>
+    <item>drawable/b299</item>
+    <item>drawable/b302</item>
+    <item>drawable/b305</item>
+    <item>drawable/b308</item>
+    <item>drawable/b311</item>
+    <item>drawable/b314</item>
+    <item>drawable/b317</item>
+    <item>drawable/b320</item>
+    <item>drawable/b323</item>
+    <item>drawable/b326</item>
+    <item>drawable/b329</item>
+    <item>drawable/b332</item>
+    <item>drawable/b335</item>
+    <item>drawable/b338</item>
+    <item>drawable/b350</item>
+    <item>drawable/b353</item>
+    <item>drawable/b356</item>
+    <item>drawable/b359</item>
+    <item>drawable/b362</item>
+    <item>drawable/b365</item>
+    <item>drawable/b368</item>
+    <item>drawable/b371</item>
+    <item>drawable/b374</item>
+    <item>drawable/b377</item>
+    <item>drawable/b386</item>
+    <item>drawable/b389</item>
+    <item>drawable/b392</item>
+    <item>drawable/b395</item>
+</string-array>
+
+
+</resources>

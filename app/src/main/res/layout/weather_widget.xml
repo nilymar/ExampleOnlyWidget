@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background_main"
+    android:layout_gravity="left"
+    android:textDirection="ltr"
+    android:id="@+id/widget_layout">
+
+    <ImageView
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/widget_description"
+        tools:src="@color/light_blue" />
+
+    <TextView
+        android:id="@+id/current_city"
+        style="@style/widgetTextTitles"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/small_margin"
+        tools:text="new york"/>
+
+    <TextView
+        android:id="@+id/current_temp"
+        style="@style/widgetText"
+        tools:text="10c"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/current_city"/>
+
+    <TextView
+        android:id="@+id/current_time"
+        style="@style/widgetText"
+        tools:text="00:00"
+        android:layout_below="@id/current_city"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/current_temp" />
+
+    <ImageView
+        android:id="@+id/widget_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/widget_icon"
+        android:minHeight="@dimen/widget_icon"
+        android:scaleType="centerCrop"
+        android:layout_margin="@dimen/very_small_margin"
+        android:layout_below="@id/current_temp"
+        android:layout_centerInParent="true"
+        tools:src="@drawable/a113" />
+
+</RelativeLayout>

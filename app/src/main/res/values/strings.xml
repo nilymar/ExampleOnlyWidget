@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">"Example Weather Widget"</string>
+    <string name="api_key">a179c797da494f49971130703191205</string>
+    <string name="no_data_available">No Forecast found</string>
+    <string name="no_internet_connection">No Internet connection</string>
+    <!-- this is the content of the about screen inflated from the menu-->
+    <string name="about_text"> Powered by https://www.apixu.com/  \n
+    \n
+    The weather conditions and icon names were taken from: http://www.apixu.com/doc/Apixu_weather_conditions.xml \n
+    \n
+    The icons were downloaded from: https://www.apixu.com/doc/weather-conditions.aspx \n</string>
+    <!-- from here every thing is connected to settings preferences -->
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Weather Forecast Settings</string>
+    <!-- Strings for city (q) preference -->
+    <string name="settings_city_label">city</string>
+    <string name="settings_city_key" translatable="false">name_of_city</string>
+    <string name="settings_city_default" translatable="false">New York</string>
+    <!-- Strings for number of forecast days preference -->
+    <string name="settings_forecast_days_label">Days of forecast to show</string>
+    <string name="settings_forecast_days_key" translatable="false">forecast_days</string>
+    <string name="settings_forecast_days_default" translatable="false">5</string>
+
+    <string name="query_forecast_days">days</string>
+    <string name="query_by_city">q</string>
+    <string name="about_menu_item">About</string>
+    <string name="date_of_forecast">Date of Forecast</string>
+    <string name="min_temp_title">Min. Temperature: </string>
+    <string name="max_temp_title">Max. Temperature: </string>
+    <string name="temp_temp">...</string>
+    <string name="conditions">Weather Conditions: </string>
+    <string name="humidity_title">Humidity: </string>
+    <string name="forecast_title">"Weather forecast for "</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="current_temp">Current temp:</string>
+    <string name="current_weather">Current weather</string>
+    <string name="current_wind_kph">Current wind kph:</string>
+    <string name="widget_description">forecast</string>
+    <string name="time_of_forecast">Time of forecast:</string>
+    <string name="feels_like">Feels like:</string>
+    <string name="humidity">Humidity:</string>
+    <string name="wind">Wind:</string>
+    <string name="wind_dir">Wind dir\':</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--using @dimen/_sdp for dimensions-->
+<resources>
+    <dimen name="regular_margin">@dimen/_8sdp</dimen>
+    <dimen name="small_margin">@dimen/_4sdp</dimen>
+    <dimen name="card_radius">@dimen/_10sdp</dimen>
+    <dimen name="card_title_text">@dimen/_16sdp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">@dimen/_8sdp</dimen>
+    <dimen name="very_small_margin">@dimen/_2sdp</dimen>
+    <dimen name="widget_text">@dimen/_7sdp</dimen>
+    <dimen name="widget_big_text">@dimen/_9sdp</dimen>
+    <dimen name="widget_icon">@dimen/_60sdp</dimen>
+</resources>
