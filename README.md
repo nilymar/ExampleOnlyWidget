@@ -23,5 +23,5 @@ widget on change in setting, and use an intent to send out the widght id. you ca
 compared to the one made in ExampleWeather API
 **************************************************************************************************************************************
 
-![onlyWidgetGif](https://user-images.githubusercontent.com/33417968/60166686-4a96c300-980a-11e9-8a17-d649a5f81764.gif)
+![5d133626b1678895942516](https://user-images.githubusercontent.com/33417968/60167229-559e2300-980b-11e9-8545-2592531336b5.gif)
 
