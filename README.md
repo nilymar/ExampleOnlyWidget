@@ -22,6 +22,10 @@ Then in the setting activity "onCreate" you add an intent to get the widget id  
 widget on change in setting, and use an intent to send out the widght id. you can look at the changes made in the settingActivity file
 compared to the one made in ExampleWeather API
 **************************************************************************************************************************************
+added location suggestions to the city preference - added a json file to assets, based on the one here: https://raw.githubusercontent.com/David-Haim/CountriesToCitiesJSON/master/countriesToCities.json
+
+and created new version for editTextPreference, so it will have the suggestions, based on the suggestions here: https://stackoverflow.com/questions/3326317/possible-to-autocomplete-a-edittextpreference
+
 
 ![5d133626b1678895942516](https://user-images.githubusercontent.com/33417968/60167229-559e2300-980b-11e9-8545-2592531336b5.gif)
 
