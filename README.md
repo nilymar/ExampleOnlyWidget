@@ -28,4 +28,4 @@ and created new version for editTextPreference, so it will have the suggestions,
 **************************************************************************************************************************************
 
 
-![20190701_172132_edited](https://user-images.githubusercontent.com/33417968/60444388-cb4c2980-9c25-11e9-90d3-4ba4d1bf0fa8.gif)
+![ezgif com-resize (2)](https://user-images.githubusercontent.com/33417968/60444587-3269de00-9c26-11e9-8663-22e3cca5d08e.gif)
