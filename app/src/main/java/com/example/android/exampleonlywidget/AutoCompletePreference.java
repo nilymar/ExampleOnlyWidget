@@ -1,6 +1,7 @@
 package com.example.android.exampleonlywidget;
 
 import android.content.Context;
+import android.os.Build;
 import android.preference.EditTextPreference;
 import android.util.AttributeSet;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 
+import androidx.annotation.RequiresApi;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,21 +19,17 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class AutoCompletePreference extends EditTextPreference
-{
-    public AutoCompletePreference(Context context)
-    {
+public class AutoCompletePreference extends EditTextPreference {
+    public AutoCompletePreference(Context context) {
         super(context);
     }
 
-    public AutoCompletePreference(Context context, AttributeSet attrs)
-    {
+    public AutoCompletePreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
     public AutoCompletePreference(Context context, AttributeSet attrs,
-                                          int defStyle)
-    {
+                                  int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -40,15 +39,15 @@ public class AutoCompletePreference extends EditTextPreference
      * we perform surgery on it to use the type of edit field that
      * we want.
      */
-    protected void onBindDialogView(View view)
-    {
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
 
         // find the current EditText object
-        final EditText editText = (EditText)view.findViewById(android.R.id.edit);
+        final EditText editText = (EditText) view.findViewById(android.R.id.edit);
         // copy its layout params
         ViewGroup.LayoutParams params = editText.getLayoutParams();
-        ViewGroup vg = (ViewGroup)editText.getParent();
+        ViewGroup vg = (ViewGroup) editText.getParent();
         String curVal = editText.getText().toString();
         // remove it from the existing layout hierarchy
         vg.removeView(editText);
@@ -80,10 +79,8 @@ public class AutoCompletePreference extends EditTextPreference
             }
         }    
 
-        /*String[] PLACES = new String[] {
-                "Athens", "Florance", "London", "New York"};*/
-        if (PLACES!=null) {
-            ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),
+        if (PLACES.length!=0) {
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(),
                     android.R.layout.simple_dropdown_item_1line, PLACES);
             mACTV.setAdapter(adapter);
         }
@@ -92,8 +89,8 @@ public class AutoCompletePreference extends EditTextPreference
         vg.addView(mACTV);
     }
 
-    public String loadJSONFromAsset() {
-        String json = null;
+    private String loadJSONFromAsset() {
+        String json;
         try {
             InputStream is = getContext().getAssets().open("locations.json");
             int size = is.available();
