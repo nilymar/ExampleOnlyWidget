@@ -3,15 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:title="@string/settings_title">
-    <EditTextPreference
+    <com.example.android.exampleonlywidget.AutoCompletePreference
         android:defaultValue="@string/settings_city_default"
         android:key="@string/settings_city_key"
         android:title="@string/settings_city_label"
         android:inputType="text"
         android:selectAllOnFocus="true"
-        android:maxLines="1" />
+        android:maxLines="1"
+        />
+   <!-- <EditTextPreference
+        android:defaultValue="@string/settings_city_default"
+        android:key="@string/settings_city_key"
+        android:title="@string/settings_city_label"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        android:maxLines="1"
+        />-->
     <com.example.android.exampleonlywidget.NumberPickerPreference
         android:defaultValue="5"
         android:key="@string/settings_forecast_days_key"
         android:title="@string/settings_forecast_days_label" />
+
 </PreferenceScreen>
