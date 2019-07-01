@@ -39,7 +39,6 @@ public class AutoCompletePreference extends EditTextPreference {
      * we perform surgery on it to use the type of edit field that
      * we want.
      */
-    @RequiresApi(api = Build.VERSION_CODES.M)
     protected void onBindDialogView(View view) {
         super.onBindDialogView(view);
 
