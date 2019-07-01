@@ -28,5 +28,4 @@ and created new version for editTextPreference, so it will have the suggestions,
 **************************************************************************************************************************************
 
 
-![5d133626b1678895942516](https://user-images.githubusercontent.com/33417968/60167229-559e2300-980b-11e9-8545-2592531336b5.gif)
-
+![20190701_172132_edited](https://user-images.githubusercontent.com/33417968/60444388-cb4c2980-9c25-11e9-90d3-4ba4d1bf0fa8.gif)
