@@ -10,10 +10,12 @@ import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.AppCompatActivity;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
 import static com.example.android.exampleonlywidget.WidgetUpdateJobIntentService.ACTION_UPDATE_WEATHER_WIDGET_ONLINE;
+
 
 // with this we create the setting screen, accessible from the menu,
 // where you can set the city and number of days for the weather forecast
@@ -33,7 +35,7 @@ public class SettingActivity extends AppCompatActivity {
             appWidgetId = extras.getInt(
                     AppWidgetManager.EXTRA_APPWIDGET_ID,
                     AppWidgetManager.INVALID_APPWIDGET_ID);
-            android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+            ActionBar actionBar = getSupportActionBar();
             // hide the home (back to mainActivity) button when the setting screen pop on new widget installment
             if (actionBar != null) {
                 actionBar.setHomeButtonEnabled(false); // disable the button
@@ -46,6 +48,16 @@ public class SettingActivity extends AppCompatActivity {
     public static class WeatherPreferenceFragment extends PreferenceFragment
             implements Preference.OnPreferenceChangeListener {
 
+//        @Override
+//        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+//            super.onCreate(savedInstanceState);
+//            addPreferencesFromResource(R.xml.setting_main);
+//            Preference setForcastLocation = findPreference(getString(R.string.settings_city_key));
+//            bindPreferenceSummaryToValue(setForcastLocation);
+//            Preference setForecastDays = findPreference(getString(R.string.settings_forecast_days_key));
+//            bindPreferenceSummaryToValue(setForecastDays);
+//        }
+
         @Override
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -56,29 +68,38 @@ public class SettingActivity extends AppCompatActivity {
             bindPreferenceSummaryToValue(setForecastDays);
         }
 
+
         @Override
         public boolean onPreferenceChange(Preference preference, Object value) {
-            if (preference instanceof EditTextPreference) {
+            if (preference instanceof AutoCompletePreference) {
                 if (value.toString().isEmpty())
                     preference.setSummary(getString(R.string.settings_city_default)); // if there was no city saved, that the default city
+            //}
+//            if (preference instanceof EditTextPreference) {
+//                if (value.toString().isEmpty())
+//                    preference.setSummary(getString(R.string.settings_city_default)); // if there was no city saved, that the default city
             } else if (preference instanceof NumberPickerPreference) {
                 NumberPickerPreference numPref = (NumberPickerPreference) preference;
                 String forecastDays = String.valueOf(numPref.getValue());
                 savePreferences(preference.getKey(), forecastDays);
                 preference.setSummary(forecastDays);
-            } else {
-                preference.setSummary(value.toString());
+
             }
             return true;
         }
 
         private void bindPreferenceSummaryToValue(Preference preference) {
             preference.setOnPreferenceChangeListener(this);
-            if (preference instanceof EditTextPreference) { // for the city
+            if (preference instanceof AutoCompletePreference) { // for the city
                 SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
                 String preferenceString = preferences.getString(preference.getKey(), "");
                 onPreferenceChange(preference, preferenceString);
-            } else {
+//            }
+//            if (preference instanceof EditTextPreference) { // for the city
+//                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
+//                String preferenceString = preferences.getString(preference.getKey(), "");
+//                onPreferenceChange(preference, preferenceString);
+            } else if (preference instanceof NumberPickerPreference){
                 String preferenceString = restorePreferences(preference.getKey());
                 onPreferenceChange(preference, preferenceString);
             }
