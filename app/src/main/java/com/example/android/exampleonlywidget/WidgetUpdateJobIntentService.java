@@ -9,8 +9,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.support.annotation.NonNull;
-import android.support.v4.app.JobIntentService;
+import androidx.annotation.NonNull;
+import androidx.core.app.JobIntentService;
 import android.text.TextUtils;
 import android.util.Log;
 import org.json.JSONException;
@@ -23,9 +23,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 /**
  * An {@link JobIntentService} subclass for handling asynchronous task requests in
@@ -94,8 +91,8 @@ public class WidgetUpdateJobIntentService extends JobIntentService {
     }
 
     // Helper methods related to requesting and receiving current weather from APIXU
-    public static class WidgetQueryUtils {
-        private static final String LOG_TAG = WidgetUpdateJobIntentService.WidgetQueryUtils.class.getName();;
+    private static class WidgetQueryUtils {
+        private static final String LOG_TAG = WidgetUpdateJobIntentService.WidgetQueryUtils.class.getName();
         private static final int READ_TIMEOUT = 10000; /* milliseconds */
         private static final int CONNECT_TIMEOUT = 15000; /* milliseconds */
 
@@ -103,7 +100,7 @@ public class WidgetUpdateJobIntentService extends JobIntentService {
         }
 
         // Query the APIXU and return a Weather object.
-        public static Weather fetchWeather(String requestUrl) {
+        private static Weather fetchWeather(String requestUrl) {
             // Create URL object
             URL url = queryCreateUrl(requestUrl);
             // Perform HTTP request to the URL and receive a JSON response back
