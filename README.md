@@ -27,5 +27,9 @@ added location suggestions to the city preference - added a json file to assets,
 and created new version for editTextPreference, so it will have the suggestions, based on the suggestions here: https://stackoverflow.com/questions/3326317/possible-to-autocomplete-a-edittextpreference
 **************************************************************************************************************************************
 
+To see the same project, using custom preferences based on AndroidX libraries, see the project here: 
+https://github.com/nilymar/AndoidxOnlyWidget/blob/master/README.md
+
+**************************************************************************************************************************************
 
 ![ezgif com-resize (2)](https://user-images.githubusercontent.com/33417968/60444587-3269de00-9c26-11e9-8663-22e3cca5d08e.gif)
