@@ -10,7 +10,7 @@ manifest make sure no activity is a launcher activity.
 *************************************************************************************************************************************
 
 This app uses APIXU: https://www.apixu.com/ to fetch current weather and forecast, for a specify city and time period. when you
-install the widget on screen, the setting screen will open, so you can change the city and forecast period. The widget has to posible
+install the widget on screen, the setting screen will open, so you can change the city and forecast period. The widget has two posible
 layout, depending on its width. It is updated every half an hour using JobIntentService (so that it will work on the newer versions of
 android.
 
