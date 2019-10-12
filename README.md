@@ -1,5 +1,8 @@
 # ExampleOnlyWidget
 a widget only app, based on the weather app in here: https://github.com/nilymar/ExampleWeatherAPI
+---------------------------------------------------------------------------------------------------------------------------------------- 
+ !!! ATTENTION!!!!! - the api was replaced by a new one - weatherstack - I didn't update the code here - so it will require some work....
+ ---------------------------------------------------------------------------------------------------------------------------------------
 
 this app is a widget only app - i.e. the app won't appear in the apps drawer after installment, only in the widgets drawer.
 
